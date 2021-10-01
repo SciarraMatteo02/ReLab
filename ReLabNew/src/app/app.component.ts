@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'server mappe';
+  markerOptions: google.maps.MarkerOptions;
+  markerOptions2: google.maps.MarkerOptions;
   //Aggiungiamo latitudine e longitudine di un luogo
   center : any;
   position : any;
@@ -21,6 +23,20 @@ export class AppComponent {
     this.circleOptions = {fillColor : 'red'}
     this.circleOptions2 = {fillColor : 'red'}
 
+    let iconData : google.maps.Icon = {
+      url:'./assets/img/cat_acrobat.ico',
+      scaledSize : new google.maps.Size(60,60)
+    }
+  
+      this.markerOptions = {icon:iconData}
+
+   let iconData2 : google.maps.Icon = {
+        url:'./assets/img/piccione.jpg',
+        scaledSize : new google.maps.Size(60,60)
+      }
+    
+        this.markerOptions2 = {icon:iconData2}
+
   }
   blue(){
     this.circleOptions = {fillColor : 'blue'}
@@ -32,9 +48,17 @@ export class AppComponent {
     
 
   }
+  
   purple(){
     this.circleOptions = {fillColor : 'purple'}
-    
+    let iconData : google.maps.Icon = {
+      url:'./assets/img/cat_acrobat.ico',
+      scaledSize : new google.maps.Size(60,60)
+ }
+  
+this.markerOptions = {icon:iconData}
+  
 
   }
+  
 }
