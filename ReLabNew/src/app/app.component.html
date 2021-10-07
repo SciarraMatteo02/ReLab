@@ -2,27 +2,27 @@
 <!--Centriamo la mappa alle nostre coordinate-->
 <google-map [center]="center">
   <!--Mettiamo un marker alle nostre coordinate-->
- <map-marker [position]="position" 
-  [label]="label" 
-  [title]="title"
-  [options] = "markerOptions">
-</map-marker>
-<map-marker [position]="position2" 
-              [label]="label" 
-              [title]="title"
-              [options] = "markerOptions2">
- </map-marker>
- <map-marker [position]="position3" 
- [label]="label" 
- [title]="title"
- [options] = "markerOptions3">
-</map-marker>
+  <map-marker [position]="position" [label]="label" [title]="title" [options]="markerOptions">
+  </map-marker>
+
+  <map-marker [position]="position2" [label]="label" [title]="title" [options]="markerOptions2">
+  </map-marker>
+
+  <map-marker [position]="position3" [label]="label" [title]="title" [options]="markerOptions3">
+  </map-marker>
+
   <map-circle [center]="position" [radius]="50" [options]='circleOptions'>
   </map-circle>
+
   <map-circle [center]="position" [radius]="110" [options]='circleOptions2'>
   </map-circle>
-  <button (click)="blue()">blue</button>
-  <button (click)="green()">green</button>
-  <button (click)="purple()">purple</button>
-  
+
+
+  <map-polygon [paths]="vertices">
+  </map-polygon>
+
 </google-map>
+
+<button (click)="blue()">blue</button>
+<button (click)="green()">green</button>
+<button (click)="purple()">purple</button>
