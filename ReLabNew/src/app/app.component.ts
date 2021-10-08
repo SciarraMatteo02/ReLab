@@ -11,6 +11,7 @@ export class AppComponent {
   markerOptions2: google.maps.MarkerOptions;
   markerOptions3: google.maps.MarkerOptions;
   vertices: google.maps.LatLngLiteral[];
+  vertices2: google.maps.LatLngLiteral[];
   //Aggiungiamo latitudine e longitudine di un luogo
   center : any;
   position : any;
@@ -29,6 +30,12 @@ export class AppComponent {
       {  lat: this.center.lat + 0.001, lng: this.center.lng - 0.002 },
       {  lat: this.center.lat, lng: this.center.lng },
       {  lat: this.center.lat - 0.001, lng: this.center.lng - 0.002}
+    ];
+     this.vertices2 = [
+      {  lat: 45.507338,  lng: 9.190766 },
+      {  lat: 45.507338,  lng: 9.191966 },
+      {  lat: 45.506038, lng: 9.1919666},
+      {  lat: 45.506038, lng: 9.190766 },
     ];
     this.position = this.center;
     this.position2={lat: 45.507338, lng: 9.190766};
